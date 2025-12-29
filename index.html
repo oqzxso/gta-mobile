@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>VI | Home</title>
+
+<link rel="icon" href="gta/npc/lucia.jpg" type="image/jpg">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: url('gta/jason.jpg') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+
+  max-width: 95vw;
+  overflow-x: auto;
+
+  border-radius: 999px;
+  backdrop-filter: blur(12px) saturate(1.2);
+  background: rgba(0,0,0,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+header::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-btn {
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================= VIDEO CARD ================= */
+.video-card {
+  position: fixed;
+  top: 90px;
+  left: 12px;
+  z-index: 40;
+
+  width: 200px;
+  text-decoration: none;
+  color: white;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 10px;
+
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+
+.thumbnail {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  color: black;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  margin: auto;
+}
+
+.video-info {
+  margin-top: 8px;
+}
+
+.video-info h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.video-info p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ================= COUNTDOWN ================= */
+.countdown-wrap {
+  margin-top: 140px;
+
+  width: 92vw;
+  max-width: 420px;
+
+  padding: 28px 20px;
+  text-align: center;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.75);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 18px;
+}
+
+.clock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.unit {
+  padding: 16px 12px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.85);
+}
+
+.num {
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.label {
+  font-size: 14px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* ================= DESKTOP UPSCALE ================= */
+@media (min-width: 768px) {
+  .countdown-wrap {
+    max-width: 820px;
+  }
+
+  .clock {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .num {
+    font-size: 44px;
+  }
+
+  .video-card {
+    width: 260px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index" class="nav-btn">Home</a>
+  <a href="map" class="nav-btn">Map</a>
+  <a href="characters" class="nav-btn">Characters</a>
+  <a href="places" class="nav-btn">Places</a>
+  <a href="screenshots" class="nav-btn">Screenshots</a>
+  <a href="trailers" class="nav-btn">Trailers</a>
+</header>
+
+<a class="video-card" href="https://www.youtube.com/watch?v=VQRLujxTm3c" target="_blank">
+  <div class="thumbnail">
+    <img src="gta/lucia.jpg" alt="Video thumbnail">
+    <div class="play-btn" aria-hidden="true">▶</div>
+  </div>
+  <div class="video-info">
+    <h3>GTA VI Trailer 2</h3>
+    <p>Explore Leonida and Vice City!</p>
+  </div>
+</a>
+
+<section class="countdown-wrap">
+  <h1 class="title">Grand Theft Auto VI</h1>
+  <div class="subtitle">Release countdown — November 19th, 2026</div>
+
+  <div class="clock">
+    <div class="unit"><div class="num" id="days">0</div><div class="label">Days</div></div>
+    <div class="unit"><div class="num" id="hours">0</div><div class="label">Hours</div></div>
+    <div class="unit"><div class="num" id="minutes">0</div><div class="label">Minutes</div></div>
+    <div class="unit"><div class="num" id="seconds">0</div><div class="label">Seconds</div></div>
+  </div>
+</section>
+
+<script>
+const target = new Date('2026-11-19T00:00:00');
+
+function pad(n) {
+  return String(n).padStart(2,'0');
+}
+
+function update() {
+  const now = new Date();
+  let diff = Math.floor((target - now) / 1000);
+  if (diff < 0) diff = 0;
+
+  document.getElementById('days').textContent = Math.floor(diff / 86400);
+  document.getElementById('hours').textContent = pad(Math.floor((diff % 86400) / 3600));
+  document.getElementById('minutes').textContent = pad(Math.floor((diff % 3600) / 60));
+  document.getElementById('seconds').textContent = pad(diff % 60);
+}
+
+update();
+setInterval(update, 1000);
+</script>
+
+</body>
+</html>
